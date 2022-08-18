@@ -12,6 +12,8 @@ class JavaExercise12_MakeLast {
         System.out.print("END]");
   }
 
+
+  
 /*
 Exercise 12: makeLast
 Create an integer array method called makeLast that takes in an integer array “nums”. Given an int array, return a new array with double the length where its last element is the same as the original array, and all the other elements are 0. The original array will be length 1 or more. Note: by default, a new int array contains all 0's.
