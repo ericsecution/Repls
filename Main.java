@@ -1,4 +1,4 @@
-class Main {
+class Ex14ReplLessBy10 {
   public static void main(String[] args) {
 
     int a = 5;
