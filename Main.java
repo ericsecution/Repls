@@ -1,50 +1,36 @@
-class Ex14ReplLessBy10 {
+class Main {
   public static void main(String[] args) {
 
-    int a = 5;
-    int b = 7;
-    int c = 21;
+  int result = sumOdds();
 
-    boolean result = lessBy10(a, b, c);
-
-    System.out.println(result);
-
-    a = 5; b = 7; c = -1;
-    result = lessBy10(a, b, c);
-    System.out.println(result);
+  System.out.println("Final Result =  " + result);
   }
 
-  /*
-   * Exercise 14: lessBy10 Create a boolean method called lessBy10 that take in
-   * three integers, “a, “b”, and “c”. Given three ints, a b c, return true if one
-   * of them is 10 or more different than one of the others. lessBy10(1, 7, 11) →
-   * true lessBy10(1, 7, 10) → false lessBy10(11, 1, 7) → true
-   */
+/*
+Exercise 26: sumOdds
+Create an integer method that takes in no arguments or parameters. Return the sum of the odd integers between 1 and 100 inclusive.
+  */
+// sumOdds() →  2500
 
-public static boolean lessBy10(int a, int b, int c) {
-  boolean tenOrMore = false;
 
-  // I want to create some instance variables here to use in scope
-  // so that I can compare "a -b", "a-c" & "b - c" 
-  // and put them into an array to for-loop thru
-  // Then, I just need to check for both +10 & -10
-  // and that should cover every possible combo
-  int x = a-b;
-  int y = a-c;
-  int z = b-c;
+public static int sumOdds() {
+int sum = 0;
 
-  int[] differenceArray = new int[]{x, y, z};
-  for (int i = 0; i < differenceArray.length; i++) {
-    if(differenceArray[i] >= 10 || differenceArray[i] <= -10) {
-      tenOrMore = true;
-    }
-}
-  
-  return tenOrMore;
-  
-}
+  for (int i =0; i < 100; i++) {
+   if (i % 2 == 1) {
+     System.out.println("");
+          System.out.println("sum: " + sum + " + ");
+     System.out.println("-> " + "i: " + i);
+     
+    sum += i;
+     System.out.println("============");
+System.out.println("Running Total = " + sum);
+     System.out.println("");
+    } 
+  }
+  return sum;
+
 
 }
 
-// Having trouble solving the problems? After you have made a resonable effort,
-// here is a solution: https://vimeo.com/571850994
+}
